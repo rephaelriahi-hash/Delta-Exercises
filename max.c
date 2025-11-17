@@ -9,7 +9,8 @@
 int main() {
     int x = 7;
     int y = 5;
-    int z = (x >= y) ? x : y;
+    int z = (x >= y)*x +(x < y)*y; 
     printf("The bigger number is : %d\n",z); 
     return 0;
 }
+
