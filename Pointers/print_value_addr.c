@@ -12,6 +12,7 @@
 int main() {
     float input_int_check = 0;
     char input_ch_check = '\0';
+    int *ptr = NULL;
     int arr_of_int [ARRAY_SIZE] = {0};
     char arr_of_ch [ARRAY_SIZE + 1] = {'\0'};
     
@@ -36,17 +37,13 @@ int main() {
     }
 
     printf("Array of integers printed with * \n");
-    for(int i = 0; i < ARRAY_SIZE; i++){
-        printf("value: %d address: %X\n",*(arr_of_int + i),(arr_of_int + i));
+    for(int i = 0, *ptr = arr_of_int; i < ARRAY_SIZE; i++){
+        printf("value: %d address: %X\n",*(ptr + i),(ptr + i));
     }
 
     printf("\nArray of characters printed with [] \n");
     for(int i = 0; i < ARRAY_SIZE; i++){
         printf("value: %c address: %X\n",arr_of_ch[i],&arr_of_ch[i]);
     }
-    
-    char x;
-    scanf("%c",&x);
-    printf("%d",(int)x);
     return 0;
 }
