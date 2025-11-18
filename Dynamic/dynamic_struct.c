@@ -60,6 +60,10 @@ int main() {
     time3 = add_times(time1,time2);
 
     printf("The added time :\n%d:%d:%d\n", time3->hours, time3->minutes, time3->seconds);
+    
+    free(time1);
+    free(time2);
+    free(time3);
     return 0;
 }
 
@@ -86,4 +90,5 @@ Time* add_times(Time *time1, Time *time2){
     add_h %= HOURS_IN_DAY;
 
     return make_time(add_h,add_min,add_sec);
+
 }
