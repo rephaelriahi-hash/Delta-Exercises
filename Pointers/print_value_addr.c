@@ -38,12 +38,13 @@ int main() {
 
     printf("Array of integers printed with * \n");
     for(int i = 0, *ptr = arr_of_int; i < ARRAY_SIZE; i++){
-        printf("value: %d address: %X\n",*(ptr + i),(ptr + i));
+        printf("value: %d address: %p\n",*(ptr + i),(ptr + i));
     }
 
     printf("\nArray of characters printed with [] \n");
     for(int i = 0; i < ARRAY_SIZE; i++){
-        printf("value: %c address: %X\n",arr_of_ch[i],&arr_of_ch[i]);
+        printf("value: %c address: %p\n",arr_of_ch[i],&arr_of_ch[i]);
     }
     return 0;
 }
+
