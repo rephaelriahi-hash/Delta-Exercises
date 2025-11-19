@@ -24,19 +24,6 @@ int main() {
     int check_h = 0, check_min = 0, check_sec = 0;
     Time *time1, *time2, *time3;
 
-    time1 = (Time*)malloc(sizeof(Time));
-    if(time1 == NULL){
-        return -1;
-    }
-    time2 = (Time*)malloc(sizeof(Time));
-    if(time2 == NULL){
-        return -1;
-    }
-    time3 = (Time*)malloc(sizeof(Time));
-    if(time3 == NULL){
-        return -1;
-    }
-
     printf("Enter the first time:\n");
     scanf("%d:%d:%d",&check_h,&check_min,&check_sec);
     if(check_h < 0 || check_h >= HOURS_IN_DAY ||
