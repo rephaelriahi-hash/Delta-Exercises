@@ -33,7 +33,7 @@ int main() {
 -------------------------------------------------------*/
 
 char* dyn_scanf(void){
-    char ch_input = '\0';
+    int ch_input = 0;
     char *input = (char*)malloc(DEFAULT_BUFFER * sizeof(char));
     int counter = 0;
     memset(input,'\0',DEFAULT_BUFFER);
@@ -60,3 +60,4 @@ char* dyn_scanf(void){
         }while(!END_OF_INPUT(ch_input));
     return input;
 }
+
